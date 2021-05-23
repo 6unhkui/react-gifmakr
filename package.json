@@ -1,30 +1,38 @@
 {
-  "scripts": {
-    "start": "snowpack dev",
-    "build": "snowpack build",
-    "test": "web-test-runner \"src/**/*.test.tsx\"",
-    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
-    "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\""
-  },
-  "dependencies": {
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0"
-  },
-  "devDependencies": {
-    "@snowpack/plugin-dotenv": "^2.0.5",
-    "@snowpack/plugin-react-refresh": "^2.4.0",
-    "@snowpack/plugin-typescript": "^1.2.0",
-    "@snowpack/web-test-runner-plugin": "^0.2.0",
-    "@testing-library/react": "^11.0.0",
-    "@types/chai": "^4.2.13",
-    "@types/mocha": "^8.2.0",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
-    "@types/snowpack-env": "^2.3.2",
-    "@web/test-runner": "^0.12.0",
-    "chai": "^4.2.0",
-    "prettier": "^2.0.5",
-    "snowpack": "^3.0.1",
-    "typescript": "^4.0.0"
-  }
+    "scripts": {
+        "start": "snowpack dev",
+        "build": "snowpack build",
+        "test": "web-test-runner \"src/**/*.test.tsx\"",
+        "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+        "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\"",
+        "gen-tsm": "tsm src/styles"
+    },
+    "dependencies": {
+        "@ffmpeg/core": "^0.8.5",
+        "@ffmpeg/ffmpeg": "^0.9.7",
+        "react": "^17.0.0",
+        "react-dom": "^17.0.0",
+        "react-router-dom": "^5.2.0",
+        "reset-css": "^5.0.1"
+    },
+    "devDependencies": {
+        "@snowpack/plugin-dotenv": "^2.0.5",
+        "@snowpack/plugin-react-refresh": "^2.4.0",
+        "@snowpack/plugin-sass": "^1.4.0",
+        "@snowpack/plugin-typescript": "^1.2.0",
+        "@snowpack/web-test-runner-plugin": "^0.2.0",
+        "@testing-library/react": "^11.0.0",
+        "@types/chai": "^4.2.13",
+        "@types/mocha": "^8.2.0",
+        "@types/react": "^17.0.0",
+        "@types/react-dom": "^17.0.0",
+        "@types/react-router-dom": "^5.1.7",
+        "@types/snowpack-env": "^2.3.2",
+        "@web/test-runner": "^0.12.0",
+        "chai": "^4.2.0",
+        "prettier": "^2.0.5",
+        "snowpack": "^3.0.1",
+        "typed-scss-modules": "^4.1.1",
+        "typescript": "^4.0.0"
+    }
 }
