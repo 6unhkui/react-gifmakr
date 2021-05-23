@@ -5,7 +5,7 @@ interface RecordWebCamVideoProps {}
 const RecordWebCamVideo: React.FC<RecordWebCamVideoProps> = ({}) => {
     const previewRef = useRef<null | HTMLVideoElement>(null);
 
-    const startCam = async () => {
+    const turnOnWebCam = async () => {
         navigator.mediaDevices.getUserMedia({ video: true, audio: true }).then(stream => {
             if (previewRef.current) {
                 previewRef.current.srcObject = stream;
@@ -13,17 +13,17 @@ const RecordWebCamVideo: React.FC<RecordWebCamVideoProps> = ({}) => {
         });
     };
 
-    const stopCam = useCallback(() => {
+    const turnOffWebCam = useCallback(() => {
         if (previewRef.current) {
             (previewRef.current.srcObject as MediaStream).getTracks().forEach(track => track.stop());
         }
     }, []);
 
     useEffect(() => {
-        startCam();
+        turnOnWebCam();
     }, []);
 
-    useLayoutEffect(() => () => stopCam(), []);
+    useLayoutEffect(() => () => turnOffWebCam(), []);
 
     return (
         <div>
